@@ -1,326 +1,308 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <title>Stereo Depth</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X93VTCZXFZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-X93VTCZXFZ');
+</script>
+	  
+    <title>stereo depth</title>
+    
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Fira+Sans'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-.collapsible {
-  background-color: MediumSeaGreen;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.collapsible:after {
-  content: '\002B';
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-}
-
-.content {
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
-}
- /*STYLE FOR IMAGES*/
- 
-
-* {
+      html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+      * {
   box-sizing: border-box;
 }
 
-.row > .column {
-  padding: 0 8px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 .column {
   float: left;
   width: 25%;
+  height:25%;
+  padding: 5px;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 50px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: white;
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 1200px;
-}
 
-/* The Close Button */
-.close {
-  color: black;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
-}
 
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.mySlides {
-  display: none;
-}
-
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-img {
-  margin-bottom: -4px;
-}
-
-.caption-container {
-  text-align: center;
-  background-color: black;
-  padding: 2px 16px;
-  color: white;
-}
-
-.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-img.hover-shadow {
-  transition: 0.3s;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}      
+      a{
+      color: blueviolet;
+      background-color: transparent;
+      text-decoration: none;
+  } 
+    
+      p {
+  	font-size: 18px;
+	}
+      hr {border-top: 1px solid #ccc}
+   
+      .btn {margin-bottom:4px}
+      .bkg {
+     
+      background-size: 100%, auto;
+      background-position: 0 50%;
+      background-color: #fff;
+      }
+      .nopadimg { width: 100%}
+      .w3-row-padding{ padding: 0 20px;}
+      .margin-top{ margin-top: 50px;}
+      .margin-bottom{ margin-bottom: 50px;}
+      .head { height:auto;}
+      .container {padding: 0; }
       
-</style>
-</head>
+      .projecttable {
+	  width:100%;
+	  border:0px;
+	  border-spacing:0px;
+	  border-collapse:separate;
+	  margin-right:auto;
+	  margin-left:auto;
+	  margin-bottom:2em;
+      }
+      .projectimage {
+	  padding-right:2.5%;
+	  width:30%;
+	  max-width:20%;
+      }
+      .projecttext {
+	  width:80%;
+	  vertical-align:middle;
+      }
+    </style>
+      
+    </style>
+  </head>  
+  <body class="w3-white w3-margin-bottom" style="padding: 0; margin: 0;">
+
+    <!-- header -->
+    <div class="bkg w3-content" style="max-width:95%; margin-top:2em;"></div>
+      <div class="w3-row-padding w3-content" style="max-width:95%;">
+        
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          
+          <tr align="right">
+            <td style="width:58%;vertical-align:middle;">
+              <h1>Stereo Depth</h1>
+            </td>
+            <td style="padding-right:2.5%;width:70%;vertical-align:middle">
+              <a class="w3-button btn w3-white w3-text-blue w3-border" href="stereoDepthEstimation.pdf" target="_blank">open pdf</a>
+            </td>
+            
+          </tr>
+        </table>
+        
+	<div class="w3-row w3-white">
+    
+    
+		<p>Stereo Vision is the extraction of depth information from a pair of images capturing the same scene
+      from two different angles. By means of triangulation, we can find the depth information, if we are
+      able to find the corresponding (homologous) points on the two images.
+		
+    </p>
+		<p>
+      The search for the corresponding points on the two images is constrained by epipolar geometry. This essentially
+      ensures that the corresponding points of the two images lie on a straight line known as epipolar line. Thus a 2D search is reduced to to a 1D search.
+    </p>
+    <p>
+      In order to make the search for corresponding points easier, the two images are transformed in such a way such that the epipolar lines become the corresponding horizontal lines. This means that any corresponding points between the two images lie on the same row. This is known as image Rectification. 
+    </p>
+    <p>
+      The shift in the number of pixels of a point from left image to right image is known as disparity of that point. The depth of a point can be computed from the disparity of a point given by the relation 𝒛 =𝐁.𝐟/𝐝
+where ‘B’ is the baseline, ‘f’ is the focal length and ‘d’ is the disparity of the point.
+Baseline is defined as the distance between two camera centres.<br>
+</p>
+<p>
+Thus the goal of a stereo problem is to find the disparity map, through which depth map can be computed.
+</p>
+<p>A pretty good explaination of the above points can be found in this youtube <a  href="https://www.youtube.com/watch?v=QzYn0OPO0Yw" target="_blank">lecture</a></p>
+<hr>
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">                    
+      <tr align="right">
+        <td style="width:50%;vertical-align:middle;">
+          <h2>Steps</h2>
+        </td>
+        <td style="padding-right:2.5%;width:70%;vertical-align:middle">
+         
+        </td>
+        
+      </tr>
+    </table>
+ 
+<p>A typical stereo matching problem essentially consists of four steps: <br><br>
+  1. Matching cost computation<br>
+  2. Cost Aggregation<br>
+  3. Optimisation<br>
+  4. Refinement<br></p>
+
+    <hr>
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">                    
+      <tr align="right">
+        <td style="width:56%;vertical-align:middle;">
+          <h2>Matching Costs</h2>
+        </td>
+        <td style="padding-right:2.5%;width:70%;vertical-align:middle">
+         
+        </td>
+        
+      </tr>
+    </table>
   
+<p>The first component of any dense stereo matching algorithm is a similarity measure that compares
+pixel values in order to determine how likely they are to be in correspondence.</p>
+<p>The most common pixel-based matching costs include squared intensity differences (SSD)
+(Hannah 1974) and absolute intensity differences (SAD) (Kanade 1994).</p>
+<p>More robust measures such as truncated quadratics and contaminated Gaussians have been
+proposed (Black and Anandan 1996, Black and Rangarajan 1996, Scharstein and Szeliski 1998).
+These measures are useful because they limit the influence of mismatches during aggregation.</p>
+<p>Other traditional matching costs include normalized cross-correlation (Hannah 1974,Bolles et al.
+1993), which behaves similarly to sum-of-squared-differences (SSD), and binary matching costs
+(Marr and Poggio 1976), based on binary features such as edges (Baker
+and Binford 1981, Grimson 1985) or the sign of the Laplacian (Nishihara 1984). Because of their
+poor discriminability, simple binary matching costs are no longer used in dense stereo matching.</p>
+<p>Some costs are insensitive to differences in camera gain or bias, for example gradient-based
+measures (Seitz 1989, Scharstein 1994), phase and filter-bank responses, filters that remove a
+regular or robust (bi-laterally filtered) means (Ansaret al.2004, Hirschmuller and Scharstein 2009),
+and non-parametric measures such as rank and census transforms (Zabih and Woodfill 1994) or
+entropy (Zitnick et al. 2004, Zitnick and Kang 2007).</p>
+ <p>More detailed studies of these and additional matching
+costs are explored in (Szeliski and Scharstein 2004,Hirschmuller and Scharstein 2009). In
+particular, if there is a significant exposure or appearance variation between images that we are
+matching, some of the more robust measures such as the census transform (Zabih
+and Woodfill 1994), bilateral subtraction (Ansar et al 2004), or hierarchical mutual inforamtion
+(Hirschmuller 2008), should be used.
+  </p>
+  <hr>
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">                    
+    <tr align="right">
+      <td style="width:57%;vertical-align:middle;">
+        <h2>Cost Aggregation</h2>
+      </td>
+      <td style="padding-right:2.5%;width:70%;vertical-align:middle">
+       
+      </td>
+      
+    </tr>
+  </table>
+<p>
+  Local and window-based methods aggregate the matching cost by summing or averaging over a
+support region. A support region can be either two dimensional at a fixed disparity (fronto –
+parallel surface) or three dimensional x-y-d space (supporting slanted surfaces).</p>
+ <p>Two-dimensional aggregation has been implemented using square windows or Gaussian convolution (traditional),
+multiple windows anchored at different points, i.e., shiftable windows (Arnold 1983, Bobick and
+Intille 1999), windows with adaptive sizes (Okutomi and Kanade 1992, Kanade and Okutomi
+1994, Veksler 2001, Kang et al. 2001), and windows based on connected components of constant
+disparity (Boykov et al. 1998).</p>
+<p>Three-dimensional support functions that have been proposed include limited disparity difference
+(Grimson 1985), limited disparity gradient (Pollard et al. 1985), and Prazdny’s coherence principle
+(Prazdny 1985). </p>
+<hr>
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">                    
+  <tr align="right">
+    <td style="width:53%;vertical-align:middle;">
+      <h2>Optimisation</h2>
+    </td>
+    <td style="padding-right:2.5%;width:70%;vertical-align:middle">
+     
+    </td>
+    
+  </tr>
+</table>
+<p>
+  <h4>Local Methods</h4>
+  <p>In local methods, the emphasis is on the matching cost computation and on the cost aggregation
+  steps. Computing the final disparities is trivial: simply choose at each pixel the disparity associated
+  with the minimum cost value. Thus, these methods perform a local “winner- take-all” (WTA)
+  optimization at each pixel.</p>
+  <p>A limitation of this approach (and many other correspondence
+  algorithms) is that uniqueness of matches is only enforced for one image (the reference image),
+  while points in the other image might get matched to multiple points.</p>
+  <h4>Global Optimization</h4>
+  <p>In contrast, global methods perform almost all of their work during the optimisation
+  phase, and often skip the aggregation step. Many global methods are formulated in an energy minimization framework. The objective is to find a disparity function‘d’ that minimizes a global
+  energy.<br>
+  𝐸(𝑑) = 𝐸𝑑𝑎𝑡𝑎(𝑑) + 𝜆𝐸𝑠𝑚𝑜𝑜𝑡ℎ(𝑑) </p>
+<hr>
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">                    
+    <tr align="right">
+      <td style="width:58%;vertical-align:middle;">
+        <h2>Disparity refinement</h2>
+      </td>
+      <td style="padding-right:2.5%;width:70%;vertical-align:middle">
+       
+      </td>
+      
+    </tr>
+  </table>
+  <p>
+    Occluded areas can be detected using cross-checking (comparing left-to-right and right- to-left
+    disparity maps). A median filter can be applied to “clean up” spurious mismatches, and holes due
+    to occlusion can be filled by surface fitting or by distributing neighboring disparity estimates. 
+</p>
+<hr>
+<p>Results of some popular stereo algorithms.</p>
+<p>SGBM :This is an OpenCV implementation of <a  href="https://core.ac.uk/download/pdf/11134866.pdf" target="_blank">semi-global matching.</a></p></p>
+<p>MC-CNN : <a  href="https://arxiv.org/pdf/1510.05970.pdf" target="_blank">research paper</a> and <a  href="https://github.com/jzbontar/mc-cnn" target="_blank">implementation</a> </p>
+<p>CNN-CRF : <a  href="https://openaccess.thecvf.com/content_cvpr_2017/papers/Knobelreiter_End-To-End_Training_of_CVPR_2017_paper.pdf" target="_blank">research paper</a> and <a  href="https://github.com/VLOGroup/cnn-crf-stereo" target="_blank">implementation</a> </p>
+<div class="row">
+  <div class="column">
+    <img src="original_chair.jpg" alt="chair" style="width:100%">
+    <p>original</p>
+  </div>
+  <div class="column">
+    <img src="sgbm_chair.png" alt="sgbm chair" style="width:100%">
+    <p >SGBM : fattening at cup handle. Not smooth at chair handles.</p>
+  </div>
   
-  <body>
-    <h1>Stereo Depth Estimation</h1> 
-    <p> A report on <a href="stereoDepthEstimation.pdf" target="_blank"> Stereo Based Depth Estimation</a> during my internship at Samsung R&D</p>
-    
-    <!--HERE i will do qualitative analysis neeed table and pic and collapsable-->
-    <h3>Qualitative Analysis:</h3>
-    <!--ADD SOME TEXT HERE: DESCRIPTION OF WHAT IS GOING TO HAPPEN-->
-    <button class="collapsible">Open Section 1</button>
-    <div class="content">
-      <p>INSIDE SECTION 1</p>
-      <!--ADD IMAGES HERE-->
-      <div class="row">
-        <div class="column">
-          <figure>
-          <img src="images/original_chair.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-          <figcaption>ORIGINAL</figcaption>   
-          </figure>
-        </div>
-        <div class="column">
-          <img src="images/sgbm_chair.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-        </div>
-        <div class="column">
-          <img src="images/mc-cnn_chair.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-        </div>
-        <div class="column">
-          <img src="images/cnn-crf_chair.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-        </div>
-      </div>      
-    </div>
-    <button class="collapsible">Open Section 2</button>
-    <div class="content">
-      <p>INSIDE SECTION2.</p>
-    </div>
-    <button class="collapsible">Open Section 3</button>
-    <div class="content">
-      <p>INSIDE SECTION3.</p>
-    </div>  
-    
-    <!--FOR IMAGES-->
-    <div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-
-    <div class="mySlides">
-      <div class="numbertext">1 / 4</div>
-      <img src="images/original_chair.jpg" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">2 / 4</div>
-      <img src="images/sgbm_chair.png" style="width:100%">
-    </div>
-
-    <div class="mySlides">
-      <div class="numbertext">3 / 4</div>
-      <img src="images/mc-cnn_chair.png" style="width:100%">
-    </div>
-    
-    <div class="mySlides">
-      <div class="numbertext">4 / 4</div>
-      <img src="images/cnn-crf_chair.jpg" style="width:100%">
-    </div>
-    
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>
+  <div class="column">
+    <img src="mc-cnn_chair.png" alt="mc-cnn chair" style="width:100%">
+    <p >MC-CNN : cup handle is missing.</p>
+  </div>
+  <div class="column">
+    <img src="cnn-crf_chair.jpg" alt="cnn-crf chair" style="width:100%">
+    <p >CNN-CRF : cup handle is present.</p>
+  </div>
+</div>
 
 
-    <div class="column">
-      <img class="demo cursor" src="images/original_chair.jpg" style="width:100%" onclick="currentSlide(1)" alt="Original">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/sgbm_chair.png" style="width:100%" onclick="currentSlide(2)" alt="SGBM">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/mc-cnn_chair.png" style="width:100%" onclick="currentSlide(3)" alt="MC-CNN">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/cnn-crf_chair.jpg" style="width:100%" onclick="currentSlide(4)" alt="CNN-CRF">
+<div class="row">
+  <div class="column">
+    <img src="original_chair.jpg" alt="chair" style="width:100%">
+    <p>original</p>
+  </div>
+  <div class="column">
+    <img src="sgbm_chair.png" alt="sgbm chair" style="width:100%">
+    <p >SGBM : fattening at cup handle. Not smooth at chair handles.</p>
+  </div>
+  
+  <div class="column">
+    <img src="mc-cnn_chair.png" alt="mc-cnn chair" style="width:100%">
+    <p >MC-CNN : cup handle is missing.</p>
+  </div>
+  <div class="column">
+    <img src="cnn-crf_chair.jpg" alt="cnn-crf chair" style="width:100%">
+    <p >CNN-CRF : cup handle is present.</p>
+  </div>
+</div>
+
+      </div>
     </div>
   </div>
-</div>    
-    <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
-
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.maxHeight){
-          content.style.maxHeight = null;
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-        } 
-      });
-    }
-/*FOR IMAGES TO SHOW IN A LIGHTBOX*/
- function openModal() {
-   document.getElementById("myModal").style.display = "block";
-}
-
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}        
-</script> 
-</body>
-</html>
-
-
-
+  
+   
+  
