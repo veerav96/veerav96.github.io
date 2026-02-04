@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Seminar Presentations</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f8f9fa;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      text-align: center;
+      color: #333;
+      margin-bottom: 50px;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #222;
+    }
+    header p {
+      font-size: 1.1em;
+      color: #666;
+    }
+    .presentation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .presentation-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .presentation-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+    .presentation-preview {
+      width: 100%;
+      height: 250px;
+      background: #f5f5f5;
+      border: 1px solid #e0e0e0;
+    }
+    .presentation-info {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .presentation-title {
+      font-size: 1.3em;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .presentation-desc {
+      color: #666;
+      font-size: 0.95em;
+      line-height: 1.5;
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+    .presentation-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      text-align: center;
+      transition: opacity 0.3s ease;
+      font-weight: 500;
+    }
+    .presentation-btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Seminar Presentations</h1>
+      <p>Presentations delivered during my Master's program</p>
+    </header>
+
+    <div class="presentation-grid">
+      <div class="presentation-card">
+        <iframe 
+          class="presentation-preview"
+          src="slides/evaluation_open_ended_text.pdf">
+        </iframe>
+        <div class="presentation-info">
+          <div class="presentation-title">Evaluation of Open-Ended Text</div>
+          <p class="presentation-desc">Exploring methods and metrics for evaluating open-ended text generation tasks.</p>
+          <a href="slides/evaluation_open_ended_text.pdf" target="_blank" class="presentation-btn">View Full Slides</a>
+        </div>
+      </div>
+
+      <div class="presentation-card">
+        <iframe 
+          class="presentation-preview"
+          src="slides/prompting.pdf">
+        </iframe>
+        <div class="presentation-info">
+          <div class="presentation-title">Advanced Prompting Techniques</div>
+          <p class="presentation-desc">Techniques and strategies for effective prompt engineering in language models.</p>
+          <a href="slides/prompting.pdf" target="_blank" class="presentation-btn">View Full Slides</a>
+        </div>
+      </div>
+
+      <div class="presentation-card">
+        <iframe 
+          class="presentation-preview"
+          src="slides/shape_matching.pdf">
+        </iframe>
+        <div class="presentation-info">
+          <div class="presentation-title">Shape Matching Algorithms</div>
+          <p class="presentation-desc">Geometric algorithms for shape matching and pattern recognition.</p>
+          <a href="slides/shape_matching.pdf" target="_blank" class="presentation-btn">View Full Slides</a>
+        </div>
+      </div>
+
+      <div class="presentation-card">
+        <iframe 
+          class="presentation-preview"
+          src="slides/td_learning.pdf">
+        </iframe>
+        <div class="presentation-info">
+          <div class="presentation-title">Temporal Difference Learning</div>
+          <p class="presentation-desc">Fundamentals and applications of temporal difference learning in reinforcement learning.</p>
+          <a href="slides/td_learning.pdf" target="_blank" class="presentation-btn">View Full Slides</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
